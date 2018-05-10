@@ -14,6 +14,8 @@ echo "Apagando node_modules" &&
 rimraf node_modules &&
 echo "git checkout develop" &&
 git checkout develop &&
+echo "yarn install" &&
+yarn --silent &&
 echo "git pull --rebase" &&
 git pull --rebase &&
 echo "git checkout master" &&
@@ -22,8 +24,6 @@ echo "git pull --rebase" &&
 git pull --rebase &&
 echo "git merge develop" &&
 git merge --no-ff develop &&
-echo "yarn install" &&
-yarn &&
 echo "yarn lint" &&
 yarn lint &&
 echo "yarn test --single-run" &&
