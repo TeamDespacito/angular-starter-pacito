@@ -3,13 +3,16 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "preinstall": "use-yarn || npm install use-yarn --no-shrinkwrap && use-yarn",
+    "postinstall": "rimraf package-lock.json",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "commitmsg": "validate-commit-msg"
+    "commitmsg": "validate-commit-msg",
+    "clean-dist": "rimraf dist"
   },
   "private": true,
   "dependencies": {
@@ -23,7 +26,9 @@
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "core-js": "^2.4.1",
+    "rimraf": "^2.6.2",
     "rxjs": "^5.5.6",
+    "use-yarn": "^2.2.0",
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
