@@ -1,6 +1,6 @@
 {
   "name": "angular-starter-pacito",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "preinstall": "use-yarn || npm install use-yarn --no-shrinkwrap && use-yarn",
